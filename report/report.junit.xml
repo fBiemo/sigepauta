@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Test Suite" tests="10" assertions="10" errors="0" failures="2" skipped="0" time="186.154817">
+    <testsuite name="IntragrationFunctionsTest" file="C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php" tests="9" assertions="9" errors="0" failures="2" skipped="0" time="186.145474">
+      <testcase name="testInstanceFuncoesIntragacao" class="IntragrationFunctionsTest" classname="IntragrationFunctionsTest" file="C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php" line="17" assertions="1" time="0.052062"/>
+      <testcase name="testBuscarDadosNoEsiraEstudante" class="IntragrationFunctionsTest" classname="IntragrationFunctionsTest" file="C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php" line="21" assertions="1" time="0.065443"/>
+      <testcase name="testBuscarDadosNoEsiraDisciplina" class="IntragrationFunctionsTest" classname="IntragrationFunctionsTest" file="C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php" line="29" assertions="1" time="0.082904"/>
+      <testcase name="testBscarDadosNoEsiraCurso" class="IntragrationFunctionsTest" classname="IntragrationFunctionsTest" file="C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php" line="37" assertions="1" time="0.196107"/>
+      <testcase name="testBuscarDadosNoEsiraInscricao" class="IntragrationFunctionsTest" classname="IntragrationFunctionsTest" file="C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php" line="45" assertions="1" time="0.795328"/>
+      <testcase name="testListaDeAlunos" class="IntragrationFunctionsTest" classname="IntragrationFunctionsTest" file="C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php" line="54" assertions="1" time="97.372769">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">IntragrationFunctionsTest::testListaDeAlunos
+Failed asserting that '682' matches expected 684.
+
+C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php:57
+</failure>
+        <system-out>        &lt;div class="alert alert-success" role="alert"&gt;&#13;
+            &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;&#13;
+            &lt;strong&gt;Operação Efectuada: &lt;/strong&gt;&lt;br&gt;&lt;br&gt;&#13;
+&#13;
+            664 REGISTO(S) FOI(RAM) ACTUALIZADO(S) COM SUCESSO!!!.&lt;br&gt;.&lt;br&gt;1 REGISTO(S) FOI(RAM) INSERIDO(S) COM SUCESSO!!!.&lt;br&gt;.&lt;br&gt;        &lt;/div&gt;&#13;
+&#13;
+        </system-out>
+      </testcase>
+      <testcase name="testListaDeDisciplinas" class="IntragrationFunctionsTest" classname="IntragrationFunctionsTest" file="C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php" line="62" assertions="1" time="26.794117">
+        <system-out>        &lt;div class="alert alert-success" role="alert"&gt;&#13;
+            &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;&#13;
+            &lt;strong&gt;Operação Efectuada: &lt;/strong&gt;&lt;br&gt;&lt;br&gt;&#13;
+&#13;
+            1 REGISTO(S) FOI(RAM) ACTUALIZADO(S) COM SUCESSO!!!.&lt;br&gt;.&lt;br&gt;378 REGISTO(S) FOI(RAM) INSERIDO(S) COM SUCESSO!!!.&lt;br&gt;.&lt;br&gt;        &lt;/div&gt;&#13;
+&#13;
+        </system-out>
+      </testcase>
+      <testcase name="testListaDeCursos" class="IntragrationFunctionsTest" classname="IntragrationFunctionsTest" file="C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php" line="71" assertions="1" time="0.441803">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">IntragrationFunctionsTest::testListaDeCursos
+Failed asserting that '6' matches expected 11.
+
+C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php:73
+</failure>
+        <system-out>        &lt;div class="alert alert-success" role="alert"&gt;&#13;
+            &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;&#13;
+            &lt;strong&gt;Operação Efectuada: &lt;/strong&gt;&lt;br&gt;&lt;br&gt;&#13;
+&#13;
+            1 REGISTO(S) FOI(RAM) ACTUALIZADO(S) COM SUCESSO!!!.&lt;br&gt;.&lt;br&gt;4 REGISTO(S) FOI(RAM) INSERIDO(S) COM SUCESSO!!!.&lt;br&gt;.&lt;br&gt;        &lt;/div&gt;&#13;
+&#13;
+        </system-out>
+      </testcase>
+      <testcase name="testListaDeInscricoes" class="IntragrationFunctionsTest" classname="IntragrationFunctionsTest" file="C:\xampp\htdocs\sigepauta_1\tests\IntragrationFunctionsTest.php" line="80" assertions="1" time="60.344941">
+        <system-out>        &lt;div class="alert alert-success" role="alert"&gt;&#13;
+            &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;&#13;
+            &lt;strong&gt;Operação Efectuada: &lt;/strong&gt;&lt;br&gt;&lt;br&gt;&#13;
+&#13;
+            266 REGISTO(S) FOI(RAM) ACTUALIZADO(S) COM SUCESSO!!!.&lt;br&gt;.&lt;br&gt;15480 REGISTO(S) FOI(RAM) INSERIDO(S) COM SUCESSO!!!.&lt;br&gt;.&lt;br&gt;        &lt;/div&gt;&#13;
+&#13;
+        </system-out>
+      </testcase>
+    </testsuite>
+    <testsuite name="SomaTest" file="C:\xampp\htdocs\sigepauta_1\tests\SomaTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.009343">
+      <testcase name="testAdd" class="SomaTest" classname="SomaTest" file="C:\xampp\htdocs\sigepauta_1\tests\SomaTest.php" line="7" assertions="1" time="0.009343"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

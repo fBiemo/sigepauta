@@ -7,66 +7,9 @@ before_install:
     - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
     
  # Comandos que você deseja executar que verificarão sua compilação.
-    
-#script: phpunit
 
 before_script:
     - composer install
 script: phpunit --configuration phpunit.xml --coverage-text
 
-# allow_failures: permite que esta compilação falhe sob os ambientes especificados.
-# fast_finish: Se a sua construção falhar, não continue tentando construir, apenas pare.
-#
-#matrix:
-# fast_finish: true
-#
-# # Personalizar quando os emails de notificação são enviados.
-# notifications:
-#   on_success: never
-#   on_failure: always
-#
-Aqui eu adicionei as versões do PHP permitidas para os projetos.
-O before_script permite que você execute o comando antes que o ambiente seja realmente executado.
-allow_failures contém as condições que permitem que sua construção falhe.
-as notificações o notificarão em todos os cenários de sucesso ou falha de compilação.
-Se você estiver usando o Symfony 3 , você pode adicionar este script fornecido por Antonio Jiménez
-
-## Project language
-#language: php
-## Allows use container-based infrastructure
-#sudo: false
-#
-## Start mysql service
-#
-#services:
-# - mysql
-#
-# before_script:
-#- cp .env.travis .env
-#- mysql -e 'create database pautas_fe;'
-#- composer self-update
-#- composer install --no-interaction
-#- php artisan key:generate
-#- php artisan migrate --seed
-#
-#script:
-#    - vendor/bin/phpunit
-# env:
-# - SYMFONY_VERSION="3.0.*" DB=mysql
-#
-##before-install:
-# #- composer self-update
-#
-## Install composer dependencies,
-## Create database, schema and fixtures
-#
-# install:
-# - composer install
-# - cp app/config/parameters.yml.dist app/config/parameters.yml
-# - php bin/console doctrine:database:create --env=test
-# - php bin/console doctrine:schema:create --env=test
-# - php bin/console doctrine:fixtures:load -n --env=test
  
- # Run script
-#script:
-# - phpunit

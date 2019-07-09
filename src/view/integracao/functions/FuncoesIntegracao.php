@@ -477,4 +477,12 @@ class FuncoesIntegracao {
 
         <?php
     }
+    function getData(){
+        $mydb = new mySQLConnection();
+        $consulta= mysqli_query($mydb->openConection(),"select count(*) as nrDeRegistos from inscricao");
+        $linhas = mysqli_fetch_array($consulta);
+        $contador = $linhas['nrDeRegistos'];
+
+        return $contador;
+    }
 }

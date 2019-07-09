@@ -17,5 +17,8 @@ class IntragrationFunctionsTest extends TestCase{
     public function testInstanceFuncoesIntragacao(){
         $this->assertInstanceOf(FuncoesIntegracao::class, $this->fucInt);
     }
-   //absent methodos to complete test file
+   function testGetData(){
+
+        $this->assertEquals( 5, $this->fucInt->getData());
+   }
 }

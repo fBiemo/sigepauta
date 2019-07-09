@@ -8,6 +8,7 @@ class SomaTest extends TestCase{
         $var = new Soma();
         $this->assertTrue(true, $var->add());
     }
+
 }
 
 ?>

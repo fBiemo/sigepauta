@@ -19,6 +19,6 @@ class IntragrationFunctionsTest extends TestCase{
     }
    function testGetData(){
 
-        $this->assertEquals( 5, $this->fucInt->getData());
+        $this->assertEquals( 54, $this->fucInt->getData());
    }
 }

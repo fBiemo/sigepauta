@@ -14,7 +14,7 @@
    private $DB ="ja75c6n0soets4l4";
    private $PASSWORD="g3ellqs2nhznnd7b";
    private $PORT ="3306";
-
+   
 		public function __construct(){
 			$this->openConection();
 			

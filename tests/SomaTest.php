@@ -6,7 +6,7 @@ class SomaTest extends TestCase{
 
     function testAdd(){
         $var = new Soma();
-        $this->assertFalse(false, $var->add());
+        $this->assertTrue(true, $var->add());
     }
 }
 

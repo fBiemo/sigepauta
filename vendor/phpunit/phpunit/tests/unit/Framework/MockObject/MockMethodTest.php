@@ -38,7 +38,7 @@ final class MockMethodTest extends TestCase
     }
 
     /**
-     * @requires PHP < 7.4
+     * @requires PHP < 8
      */
     public function testFailWhenReturnTypeIsParentButThereIsNoParentClass(): void
     {

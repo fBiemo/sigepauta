@@ -268,10 +268,9 @@ final class InvocationMocker implements MethodNameMatch
             if (!$configuredMethod->mayReturn($value)) {
                 throw new IncompatibleReturnValueException(
                     \sprintf(
-                        'Method %s may not return value of type %s, its return declaration is "%s"',
+                        'Method %s may not return value of type %s',
                         $configuredMethod->getName(),
-                        \is_object($value) ? \get_class($value) : \gettype($value),
-                        $configuredMethod->getReturnTypeDeclaration()
+                        \gettype($value)
                     )
                 );
             }

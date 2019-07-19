@@ -4,9 +4,7 @@
     <unboundedVersionInspectionSettings>
       <excludedPackages />
     </unboundedVersionInspectionSettings>
-    <customRepositories>
-      <file path="$PROJECT_DIR$/composer.json" enabled="true" />
-    </customRepositories>
+    <customRepositories />
     <composerUpdateOptions />
   </component>
 </project>

@@ -6,10 +6,10 @@
  * Time: 11:59 PM
  */
 
-require_once '../Query/Classes.php';
-require_once '../Query/PessoaSQL.php';
-require_once('../dbconf/db.php');
-require_once('../dbconf/conexion.php');
+require_once './src/Query/Classes.php';
+require_once './src/Query/PessoaSQL.php';
+require_once('./src/dbconf/db.php');
+require_once('./src/dbconf/conexion.php');
 
 $classes = new Classes();
 $p = new PessoaSQL();

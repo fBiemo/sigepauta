@@ -1663,9 +1663,7 @@ abstract class TestCase extends Assert implements SelfDescribing, Test
             return $this->getMockObjectGenerator()->getObjectForTrait(
                 $traitName,
                 $traitClassName,
-                $callAutoload,
-                $callOriginalConstructor,
-                $arguments
+                $callAutoload
             );
         } catch (\Exception $e) {
             throw new Exception(

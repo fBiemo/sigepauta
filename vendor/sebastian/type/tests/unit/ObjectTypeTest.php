@@ -34,6 +34,8 @@ final class ObjectTypeTest extends TestCase
 
     protected function setUp(): void
     {
+        parent::setUp();
+
         $this->childClass = new ObjectType(
             TypeName::fromQualifiedName(ChildClass::class),
             false
@@ -79,16 +81,6 @@ final class ObjectTypeTest extends TestCase
         $this->assertFalse($classFromNamespaceA->isAssignable($classFromNamespaceB));
     }
 
-    public function testClassIsAssignableToSelfCaseInsensitively(): void
-    {
-        $classLowercased = new ObjectType(
-            TypeName::fromQualifiedName(\strtolower(ParentClass::class)),
-            false
-        );
-
-        $this->assertTrue($this->parentClass->isAssignable($classLowercased));
-    }
-
     public function testNullIsAssignableToNullableType(): void
     {
         $someClass = new ObjectType(
@@ -128,13 +120,58 @@ final class ObjectTypeTest extends TestCase
         $this->assertTrue($someClass->allowsNull());
     }
 
-    public function testCanGenerateReturnTypeDeclaration(): void
+    public function testObjectTypeIsAssignableToObjects(): void
     {
-        $this->assertEquals(': SebastianBergmann\Type\TestFixture\ParentClass', $this->parentClass->getReturnTypeDeclaration());
+        $objectType = new ObjectType(
+            TypeName::fromQualifiedName('object'),
+            true
+        );
+
+        $someObject = new class() {
+        };
+
+        $this->assertTrue(Type::fromValue($someObject, false)->isAssignable($objectType));
+    }
+
+    public function testObjectTypeIsNotAssignableToNonObjects(): void
+    {
+        $objectType = new ObjectType(
+            TypeName::fromQualifiedName('object'),
+            true
+        );
+
+        $someNonObject = 123;
+
+        $this->assertFalse(Type::fromValue($someNonObject, false)->isAssignable($objectType));
+    }
+
+    public function testReturnTypeDeclarationIsGeneratedCorrectly(): void
+    {
+        $objectType = new ObjectType(
+            TypeName::fromQualifiedName('object'),
+            false
+        );
+
+        $this->assertSame(': object', $objectType->getReturnTypeDeclaration());
+    }
+
+    public function testNullableReturnTypeDeclarationIsGeneratedCorrectly(): void
+    {
+        $objectType = new ObjectType(
+            TypeName::fromQualifiedName('object'),
+            true
+        );
+
+        $this->assertSame(': ?object', $objectType->getReturnTypeDeclaration());
     }
 
     public function testHasClassName(): void
     {
-        $this->assertEquals('SebastianBergmann\Type\TestFixture\ParentClass', $this->parentClass->className()->getQualifiedName());
+        $someClass = new ObjectType(
+            TypeName::fromQualifiedName(ParentClass::class),
+            false
+        );
+
+        $this->assertSame(ParentClass::class, $someClass->className()->getQualifiedName());
     }
 }

@@ -1,6 +1,6 @@
 ﻿<?php
 
-    require_once '../../dbconf/getConection.php';
+    require_once './src/dbconf/getConection.php';
 
     global $mydb;
 

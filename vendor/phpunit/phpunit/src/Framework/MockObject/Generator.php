@@ -273,7 +273,7 @@ final class Generator
      *
      * @throws RuntimeException
      */
-    public function getObjectForTrait(string $traitName, string $traitClassName = '', bool $callAutoload = true, bool $callOriginalConstructor = false, array $arguments = []): object
+    public function getObjectForTrait(string $traitName, string $traitClassName = '', bool $callAutoload = true): object
     {
         if (!\trait_exists($traitName, $callAutoload)) {
             throw new RuntimeException(
@@ -300,16 +300,7 @@ final class Generator
             ]
         );
 
-        return $this->getObject(
-            new MockTrait(
-                $classTemplate->render(),
-                $className['className']
-            ),
-            '',
-            $callOriginalConstructor,
-            $callAutoload,
-            $arguments
-        );
+        return $this->getObject(new MockTrait($classTemplate->render(), $className['className']));
     }
 
     public function generate($type, array $methods = null, string $mockClassName = '', bool $callOriginalClone = true, bool $callAutoload = true, bool $cloneArguments = true, bool $callOriginalMethods = false): MockClass

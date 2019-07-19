@@ -34,11 +34,15 @@ final class ObjectType extends Type
         }
 
         if ($other instanceof self) {
-            if (0 === \strcasecmp($this->className->getQualifiedName(), $other->className->getQualifiedName())) {
+            if ($this->className->getQualifiedName() === $other->className->getQualifiedName()) {
                 return true;
             }
 
             if (\is_subclass_of($other->className->getQualifiedName(), $this->className->getQualifiedName(), true)) {
+                return true;
+            }
+
+            if ($other->className->getQualifiedName() === 'object') {
                 return true;
             }
         }
